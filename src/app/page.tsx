@@ -4,7 +4,6 @@ import Header from "@/components/Header"
 import HomeBanner from "@/components/HomeBanner"
 import Services from "@/components/Services"
 import Projects from "@/components/Project"
-import About from "@/components/About"
 import FaqSection from "@/components/FaqSection"
 import Footer from "@/components/Footer"
 
@@ -65,9 +64,6 @@ export default function Home() {
           </section>
           <section id="Project" ref={sectionRefs.Project}>
             <Projects limit={2} />
-          </section>
-          <section id="About" ref={sectionRefs.About}>
-            <About />
           </section>
         </main>
         <FaqSection />

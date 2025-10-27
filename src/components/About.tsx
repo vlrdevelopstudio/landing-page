@@ -75,7 +75,7 @@ const About1: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-white dark:bg-background py-20"
+        className="bg-white dark:bg-background py-8"
       >
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -248,27 +248,6 @@ const About1: React.FC = () => {
                 brand. Secure a consistent brand image with a domain name that
                 matches your business.
               </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{
-                  opacity: isInView ? 1 : 0,
-                  y: isInView ? 0 : 20,
-                }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button
-                    size="lg"
-                    className="mt-4 bg-dark-blue hover:bg-dark-blue/90"
-                  >
-                    Get Started
-                  </Button>
-                </motion.div>
-              </motion.div>
             </motion.div>
           </div>
         </div>

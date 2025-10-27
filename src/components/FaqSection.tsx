@@ -8,6 +8,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import Container from "./Container";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 type FaqItem = { question: string; answer: string };
 
@@ -55,23 +56,47 @@ export default function FAQAccordion({
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           {/* Grid 1/3 – 2/3 */}
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-3">
-            {/* KIRI: 1/3 (gambar penuh kolom) */}
+            {/* KIRI: 1/3 (gambar dengan overlay) */}
             <div className="lg:col-span-1">
-              <Card className="border-0 shadow-none overflow-hidden rounded-2xl">
-                <CardContent className="p-0">
-                  {/* Tinggi konsisten + cover */}
-                  <img
-                    src="https://cdn.tailgrids.com/assets/images/marketing/about/about-01/image-1.jpg"
-                    alt="FAQ illustration"
-                    className="w-full rounded-2xl object-cover
-                               aspect-[4/5] sm:aspect-[4/5] lg:h-[560px] lg:aspect-auto"
-                  />
+              <div className="group relative w-full">
+                <Card className="border-0 shadow-none overflow-hidden rounded-2xl">
+                   <CardContent className="p-0">
+                  {/* Gambar dengan group hover */}
+                  <div className="relative w-full group">
+                    <img
+                      src="/ourteam.jpg"
+                      alt="Our Team"
+                      className="w-full rounded-2xl object-cover
+                                 aspect-[4/5] sm:aspect-[4/5] lg:h-[250px] lg:aspect-auto
+                                 transition-transform duration-500"
+                    />
+
+                    {/* Overlay hanya aktif saat gambar dihover */}
+                    <div
+                      className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100
+                                 transition-opacity duration-500 rounded-2xl flex flex-col 
+                                 justify-center items-center text-center px-4"
+                    >
+                      <h2 className="text-white text-2xl font-semibold mb-4">Our Team</h2>
+                      <div className="flex gap-3">
+                        <Link href="/about">
+                          <Button
+                          variant="outline"
+                          className="text-black border-white hover:bg-white transition-all"
+                        >
+                          About Us
+                        </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </div>
             </div>
 
             {/* KANAN: 2/3 (accordion) */}
-            <div className="lg:col-span-2 px-5 py-10">
+            <div className="lg:col-span-2 px-5 py-5">
               <div className="max-w-3xl">
                 <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
                   Frequently asked questions
@@ -83,7 +108,7 @@ export default function FAQAccordion({
                     className="px-0 align-baseline text-indigo-600 hover:text-indigo-700"
                     asChild
                   >
-                    <a href="mailto:support@example.com">sending us an email</a>
+                    <a href="mailto:vlrdevelopstudio@gmail.com">sending us an email</a>
                   </Button>
                   .
                 </p>
