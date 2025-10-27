@@ -1,16 +1,16 @@
 "use client";
 import { headerData } from "@/constant/data";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import React from "react";
 
-const HeaderMenu = () => {
-  const pathname = usePathname();
+const HeaderMenu = ({ activeSection }: { activeSection: string}) => {
+  // const pathname = usePathname();
 
   return (
     <div className="hidden md:inline-flex w-1/3 items-center gap-7 text-dark-blue capitalize font-semibold text-base">
       {headerData?.map((item) => {
-        const isActive = pathname === item?.href;
+        const isActive = item?.href === `/#${activeSection}`;
         return (
           <Link
             key={item?.href || item?.title}
