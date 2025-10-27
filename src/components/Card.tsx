@@ -1,8 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CloudUpload, Lock, RefreshCcw, Fingerprint } from "lucide-react"
+
 import { motion } from "framer-motion"
 import { useRef } from "react"
 import { useInView } from "framer-motion"
+import { BrainCircuit, PaintBucketIcon, PhoneIcon, WebhookIcon } from "lucide-react"
 
 export default function FeatureSection() {
   const ref = useRef(null)
@@ -10,28 +11,28 @@ export default function FeatureSection() {
 
   const features = [
     {
-      icon: <CloudUpload className="w-5 h-5 text-white" />,
-      title: "Push to deploy",
+      icon: <WebhookIcon className="w-5 h-5 text-white" />,
+      title: "Web Development",
       description:
-        "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+        "Building responsive and modern websites tailored to your business needs.",
     },
     {
-      icon: <Lock className="w-5 h-5 text-white" />,
-      title: "SSL certificates",
+      icon: <PaintBucketIcon className="w-5 h-5 text-white" />,
+      title: "UI/UX Design",
       description:
-        "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+        "Creating user-friendly interfaces that enhance user experience.",
     },
     {
-      icon: <RefreshCcw className="w-5 h-5 text-white" />,
-      title: "Simple queues",
+      icon: <BrainCircuit className="w-5 h-5 text-white" />,
+      title: "Machine Learning",
       description:
-        "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
+        "Implementing intelligent systems to automate and optimize processes.",
     },
     {
-      icon: <Fingerprint className="w-5 h-5 text-white" />,
-      title: "Advanced security",
+      icon: <PhoneIcon className="w-5 h-5 text-white" />,
+      title: "Mobile App Development",
       description:
-        "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+        "Developing cross-platform mobile applications for iOS and Android.",
     },
   ]
 
