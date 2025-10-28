@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 // import Link from "next/link";
 // import MobileMenu from "./MobileMenu";
 
-const Header = ({ activeSection }: { activeSection: string }) => {
+const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-neutral-50 border-b border-gray-800/20 px-5">
       <Container className="flex justify-between items-center py-5">
@@ -14,7 +14,7 @@ const Header = ({ activeSection }: { activeSection: string }) => {
           {/* <Logo /> */}
         </div>
 
-        <HeaderMenu activeSection={activeSection} />
+        <HeaderMenu />
 
         <div className="w-auto md:w-1/3 flex items-center justify-end gap-5">
           <Button

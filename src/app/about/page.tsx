@@ -5,7 +5,7 @@ import Footer from "@/components/Footer"
 export default function AboutPage() {
   return (
     <div className="bg-white text-white">
-      <Header activeSection="About" />
+      <Header />
       <main className="flex min-h-screen flex-col items-center">
         <div className="w-full mt-24">
           <About />
